@@ -1,4 +1,4 @@
-# mafengwo
+# guazi
 
 ## Project setup
 ```
