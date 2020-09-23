@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-
+    <recommenderCar></recommenderCar>
   </div>
 </template>
 
-<style lang="stylus">
+<script>
+  import recommenderCar from "./views/home/recommenderCar";
+
+  export default {
+    components:{
+      recommenderCar
+    }
+  }
+</script>
+
+<style lang="stylus" scoped>
 
 </style>
