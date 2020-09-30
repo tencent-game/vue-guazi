@@ -1,23 +1,31 @@
+/*
+ * @Author: your name
+ * @Date: 2020-09-28 19:54:01
+ * @LastEditTime: 2020-09-30 10:29:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \program\guazi\src\router\index.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path:'/',
+    redirect:'/index'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/index',
+    name: 'index',
+    component: ()=>import(/* webpackChunkName: "idnex" */ '../views/index.vue')
+  },
+  {
+    path: '/Cardeckill',
+    name: 'Cardeckill',
+    component: ()=>import(/* webpackChunkName: "idnex" */ '../views/deckill.vue')
+  },
 ]
 
 const router = new VueRouter({
