@@ -1,0 +1,66 @@
+{
+    "code": 0,
+    "data": {
+        "complaintButtons": [
+            {
+                "desc": "费用投诉",
+                "disable": true,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1575014261?stream=false",
+                "jumpUrl": "https://uc.guazi.com/buy-car.html#/sold-type-select?category=4&parentId=415",
+                "type": "complaintFee"
+            },
+            {
+                "desc": "人员投诉",
+                "disable": true,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1575014309?stream=false",
+                "jumpUrl": "https://uc.guazi.com/buy-car.html#/sold-type-select?category=4&parentId=417",
+                "type": "complaintPerson"
+            },
+            {
+                "desc": "流程投诉",
+                "disable": true,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1575014283?stream=false",
+                "jumpUrl": "https://uc.guazi.com/buy-car.html#/sold-type-select?category=4&parentId=416",
+                "type": "complaintProcess"
+            },
+            {
+                "desc": "其他投诉",
+                "disable": false,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1575014322?stream=false",
+                "jumpUrl": "https://uc.guazi.com/buy-car.html#/sold-type-select?category=4&parentId=418",
+                "type": "complaintOther"
+            }
+        ],
+        "suggestionButtons": [
+            {
+                "desc": "车源质量反馈",
+                "disable": true,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1574391954?stream=false",
+                "jumpUrl": "https://uc.guazi.com/buy-car.html#/sold-type-select?category=3&parentId=0",
+                "type": "carfeedback"
+            },
+            {
+                "desc": "车辆信息纠错",
+                "disable": false,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1577951488?stream=false",
+                "jumpUrl": "https://uc.guazi.com/buy-car.html#/sold-type-select?category=3&parentId=0&selected=1",
+                "type": "carErrorInfo"
+            },
+            {
+                "desc": "我有建议",
+                "disable": false,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1575014332?stream=false",
+                "jumpUrl": "customer-service.html#/suggestion-form",
+                "type": "suggestion"
+            },
+            {
+                "desc": "屏蔽打扰",
+                "disable": false,
+                "iconUrl": "https://car-image.guazistatic.com/mdresources-online/upload1572945414?stream=false",
+                "jumpUrl": "https://uc.guazi.com/customer-service.html#/stop-harass",
+                "type": "shieldingDisturb"
+            }
+        ]
+    },
+    "timestamp": 1601892391110
+}
