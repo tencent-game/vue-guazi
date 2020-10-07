@@ -1,4 +1,4 @@
-# guazi
+# vue-guazi
 
 ## Project setup
 ```
