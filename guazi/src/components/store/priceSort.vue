@@ -10,7 +10,7 @@
         :finished="finished"
         finished-text="我也是有底线的">
     <ul>
-        <li v-for="car in carLists" :key='car.attributes.track_local'>
+        <router-link v-for="car in carLists" :key='car.attributes.track_local' :to="{name:'carInfo',params:{...car}}" tag='li'>
             <a>
                 <div class="car_left">
                     <img :src="car.attributes.thumb_img" alt="">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </a>
-        </li>
+        </router-link>
         
     </ul>
     </van-list> 

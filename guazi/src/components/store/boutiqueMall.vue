@@ -1,6 +1,6 @@
 <template>
     <ul class="boutique-mall">
-        <router-link  :to="{name:'carInfo',params:{...car}}" v-for="car in car_list" :key='car.title' class="boutique-mall-item" >
+        <li  v-for="car in car_list" :key='car.title' class="boutique-mall-item" >
             <a href="">
                <img :src="car.car_image" alt="">
                <div class="car-introduce-box">
@@ -13,7 +13,7 @@
                    </div>
                </div>
             </a>
-        </router-link>
+        </li>
         <li class="boutique-mall-item">
             <div class="border">
                 <van-icon name="arrow" size='.3rem' style="line-height:.5rem" color='#8f96a0' />

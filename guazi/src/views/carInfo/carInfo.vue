@@ -24,10 +24,8 @@ export default {
         carinfoFooter,
     },
     created(){
-        
-        this.$store.state.car=this.$route.params
         console.log(this.$route.params)
-        console.log(this.$store.state.car)
+        this.$store.dispatch('changeCar',this.$route.params)
     },
 }
 </script>

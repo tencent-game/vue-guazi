@@ -1,25 +1,25 @@
 <template>
     <div class="vehicle_source">
         <div  class="image">
-            <img :src="car.car_image" alt="">
+            <img :src="car.car_image||car.attributes.thumb_img" alt="">
         </div>
         <div class="product-head-b">
             <div class="price-box-b">
                 <div class="normal-price-tip">优惠后</div>
                 <div class="normal-price-b">
-                    {{car.active_price}}
-                    <span class="price-box-tag-box">原价{{car.xinche_price}}</span>
+                    {{car.active_price||priced}}
+                    <span class="price-box-tag-box">原价{{car.xinche_price||priced}}</span>
                 </div>
             </div>
             <div class="ticket-box">
                 <div class="ticket-inner">
-                    <span class="ticket-item">优惠{{youhui}}元</span>
+                    <span class="ticket-item">优惠{{youhui||car.attributes.first_pay}}元</span>
                 </div>
                 <span class="look">查看</span>
             </div>
         </div>
         <div class="car-head-box">
-            <div class="normal-car-title">{{car.car_title}}</div>
+            <div class="normal-car-title">{{car.car_title||car.attributes.title}}</div>
         </div>
         <div class="loanbox-new">
             <div class="loanbox-new-inner">
@@ -54,12 +54,15 @@ export default {
     },
     computed:{
         youhui(){
-            console.log()
+            
             return Math.round(parseFloat(this.car.active_price))*100
         },
         onepercent(){
-            return (parseFloat(this.car.active_price)/10).toFixed(2)
-        }
+            return ((parseFloat(this.car.active_price)/10))||this.car.attributes.price/100000
+        },
+        priced(){
+            return (this.car.attributes.price/10000).toFixed(2)+'万'
+        },
     },
     components:{
         guaranteesService,
@@ -142,7 +145,6 @@ export default {
                         line-height: .3rem;
                         font-size: .12rem;
                         color: #ff7147;
-                        margin-right: .096rem;
                         position: relative;
                 .look
                     font-size: .12rem;

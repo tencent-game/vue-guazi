@@ -1,6 +1,6 @@
 <template>
     <div class="car-condition" :info="info">
-        <p><span class="re-car-name">{{info.car_title}}</span></p>
+        <p><span class="re-car-name">{{info.car_title||info.attributes.title}}</span></p>
         <p><span class="re-tit">检测时间：2020.10.2</span></p>
         <p><span class="re-tit">评估结论：经检测，该车非火烧车；非泡水车；非调表车；关键事故部件中未发现变形异常项；无钣金痕迹；无焊接、切割动作。发动机舱内部无拆卸拆解痕迹；核心部件无更换记录；无漏油痕迹。车辆外观有轻微划痕刮蹭；详细结果请查看检测报告。</span></p>
     </div>

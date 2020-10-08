@@ -2,13 +2,13 @@
     <div class="base-info">
         <div class="base-info-tit">基本信息</div>
         <ul class="mod-base" :car="car" >
-            <li><span>表显里程</span><p>{{car.mileage}}</p></li>
+            <li><span>表显里程</span><p>{{car.mileage||mileage}}</p></li>
             <li><span>变速箱</span><p>自动</p></li>
             <li><span>排量</span><p>1.5L</p></li>
             <li><span>购车方式</span><p class="green">查购车流程></p></li>
-            <li><span>上牌时间</span><p>{{car.license_year}}</p></li>
+            <li><span>上牌时间</span><p>{{car.license_year||car.attributes.license_date}}</p></li>
             <li><span>出险情况</span><p class="green">查保养记录></p></li>
-            <li><span>新车含税价</span><p>{{car.xinche_price}}</p></li>
+            <li><span>新车含税价</span><p>{{car.xinche_price||price}}</p></li>
         </ul>
         <div class="btn-check" @click="clickIt">
             <a >查看车辆详细信息</a>
@@ -76,6 +76,14 @@ export default {
         console.log(this.$store.state.car)
         this.car=this.$store.state.car
         console.log(this.car)
+    },
+    computed:{
+        mileage(){
+            return (this.car.attributes.road_haul/10000)+'万公里'
+        },
+        price(){
+            return (this.car.attributes.price/10000)+'万'
+        }
     },
     methods:{
         clickIt(){

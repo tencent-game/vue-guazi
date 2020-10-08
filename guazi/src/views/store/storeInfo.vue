@@ -38,7 +38,8 @@ export default {
             let result=await http.get("/aaa/clientUc/baoMai/getCarParkNew",{city_id:this.$store.state.id})
             
             this.data1=result.data
-            this.$store.state.shopping=result.data
+            this.$store.dispatch('changeShopping',result.data)
+            // this.$store.state.shopping=result.data
             // console.log(this.data1)
         }
     }
